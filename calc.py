@@ -123,7 +123,7 @@ class PowerCalculator(BasicCalculator):
     model = "power"
 
     def calculate(self, operator, operand_1, operand_2):
-        if operator == "^":
+        if operator == "^" or operator == "**":
             result = self.power(operand_1, operand_2)
             self.print(operator, operand_1, operand_2, result)
             self.write(operator, operand_1, operand_2, result)
