@@ -36,7 +36,8 @@ class Handler():
             operand_1 = int(tokens[0])
             operand_2 = int(tokens[2])
         except Exception as exception:
-            error = "You entered an invalid expression, try again"
+            error = "This expresion is not valid, sorry"
+
             
         return operator, operand_1, operand_2, error
 
