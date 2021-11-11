@@ -127,11 +127,18 @@ class PowerCalculator(BasicCalculator):
             result = self.power(operand_1, operand_2)
             self.print(operator, operand_1, operand_2, result)
             self.write(operator, operand_1, operand_2, result)
+        elif operator == "%":
+            result = self.modulus(operand_1, operand_2)
+            self.print(operator, operand_1, operand_2, result)
+            self.write(operator, operand_1, operand_2, result)
         else:
             super().calculate(operator, operand_1, operand_2)
 
     def power(self, operand_1, operand_2):
         return operand_1 ** operand_2
+
+    def modulus(self, operand_1, operand_2):
+        return operand_1 % operand_2
 
 if __name__ == "__main__":
 
